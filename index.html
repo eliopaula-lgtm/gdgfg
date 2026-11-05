@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Digital Acessível</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Acessibilidade: Atalho de navegação por teclado -->
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- CABEÇALHO E MENU DE NAVEGAÇÃO -->
+    <header class="cabecalho">
+        <div class="container flex-cabecalho">
+            <h1 class="logo">📚 Biblioteca Digital Acessível</h1>
+            
+            <nav aria-label="Navegação Principal">
+                <ul class="menu-navegacao">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#livros">Livros</a></li>
+                    <li><a href="#categorias">Categorias</a></li>
+                    <li><a href="#sobre">Sobre o Projeto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo-principal">
+
+        <!-- SEÇÃO 1: INÍCIO / APRESENTAÇÃO -->
+        <section id="inicio" class="secao-hero">
+            <div class="container">
+                <h2>Bem-vindo à nossa biblioteca!</h2>
+                <p class="frase-apresentacao">Encontre materiais de leitura e estudo de maneira simples e organizada.</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 2: CATEGORIAS -->
+        <section id="categorias" class="secao container">
+            <h2>Categorias de Leitura</h2>
+            <div class="grid-categorias">
+                <article class="card-categoria">
+                    <span class="icone-categoria" aria-hidden="true">💻</span>
+                    <h3>Tecnologia</h3>
+                </article>
+
+                <article class="card-categoria">
+                    <span class="icone-categoria" aria-hidden="true">📖</span>
+                    <h3>Literatura</h3>
+                </article>
+
+                <article class="card-categoria">
+                    <span class="icone-categoria" aria-hidden="true">🔬</span>
+                    <h3>Ciências</h3>
+                </article>
+
+                <article class="card-categoria">
+                    <span class="icone-categoria" aria-hidden="true">📐</span>
+                    <h3>Matemática</h3>
+                </article>
+
+                <article class="card-categoria">
+                    <span class="icone-categoria" aria-hidden="true">🏛️</span>
+                    <h3>História</h3>
+                </article>
+
+                <article class="card-categoria">
+                    <span class="icone-categoria" aria-hidden="true">🌱</span>
+                    <h3>Desenvolvimento Pessoal</h3>
+                </article>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: CARDS DE LIVROS -->
+        <section id="livros" class="secao container">
+            <h2>Acervo de Livros</h2>
+            <div class="grid-livros">
+
+                <!-- Livro 1 -->
+                <article class="card-livro">
+                    <img src="https://via.placeholder.com/300x200/0d47a1/ffffff?text=Lógica+de+Programação" alt="Capa do livro Lógica de Programação na cor azul" class="capa-livro">
+                    <div class="conteudo-livro">
+                        <span class="tag-categoria">Tecnologia</span>
+                        <h3>Lógica de Programação para Iniciantes</h3>
+                        <p class="autor">Por: Ana Souza</p>
+                        <p class="descricao">Aprenda a pensar de forma lógica e crie seus primeiros algoritmos práticos.</p>
+                        <button type="button" class="btn-detalhes" aria-label="Ver detalhes do livro Lógica de Programação para Iniciantes">Ver detalhes</button>
+                    </div>
+                </article>
+
+                <!-- Livro 2 -->
+                <article class="card-livro">
+                    <img src="https://via.placeholder.com/300x200/1b5e20/ffffff?text=Contos+e+Lendas" alt="Capa do livro Contos e Lendas na cor verde" class="capa-livro">
+                    <div class="conteudo-livro">
+                        <span class="tag-categoria">Literatura</span>
+                        <h3>Contos e Lendas do Brasil</h3>
+                        <p class="autor">Por: Carlos Ribeiro</p>
+                        <p class="descricao">Uma coletânea de histórias populares que enriquecem o folclore e a cultura nacional.</p>
+                        <button type="button" class="btn-detalhes" aria-label="Ver detalhes do livro Contos e Lendas do Brasil">Ver detalhes</button>
+                    </div>
+                </article>
+
+                <!-- Livro 3 -->
+                <article class="card-livro">
+                    <img src="https://via.placeholder.com/300x200/4a148c/ffffff?text=O+Universo" alt="Capa do livro O Universo Explicado na cor roxa" class="capa-livro">
+                    <div class="conteudo-livro">
+                        <span class="tag-categoria">Ciências</span>
+                        <h3>O Universo Explicado</h3>
+                        <p class="autor">Por: Dra. Márcia Lima</p>
+                        <p class="descricao">Descubra os segredos dos planetas, estrelas e galáxias com explicações claras.</p>
+                        <button type="button" class="btn-detalhes" aria-label="Ver detalhes do livro O Universo Explicado">Ver detalhes</button>
+                    </div>
+                </article>
+
+                <!-- Livro 4 -->
+                <article class="card-livro">
+                    <img src="https://via.placeholder.com/300x200/b71c1c/ffffff?text=Matemática+Descomplicada" alt="Capa do livro Matemática Descomplicada na cor vermelha" class="capa-livro">
+                    <div class="conteudo-livro">
+                        <span class="tag-categoria">Matemática</span>
+                        <h3>Matemática Descomplicada</h3>
+                        <p class="autor">Por: Roberto Alves</p>
+                        <p class="descricao">Guia prático para entender geometria e álgebra de maneira simples no dia a dia.</p>
+                        <button type="button" class="btn-detalhes" aria-label="Ver detalhes do livro Matemática Descomplicada">Ver detalhes</button>
+                    </div>
+                </article>
+
+                <!-- Livro 5 -->
+                <article class="card-livro">
+                    <img src="https://via.placeholder.com/300x200/e65100/ffffff?text=História+do+Brasil" alt="Capa do livro História do Brasil na cor laranja" class="capa-livro">
+                    <div class="conteudo-livro">
+                        <span class="tag-categoria">História</span>
+                        <h3>História Geral do Brasil</h3>
+                        <p class="autor">Por: Juliana Martins</p>
+                        <p class="descricao">Um panorama completo dos principais acontecimentos históricos do nosso país.</p>
+                        <button type="button" class="btn-detalhes" aria-label="Ver detalhes do livro História Geral do Brasil">Ver detalhes</button>
+                    </div>
+                </article>
+
+                <!-- Livro 6 -->
+                <article class="card-livro">
+                    <img src="https://via.placeholder.com/300x200/004d40/ffffff?text=Hábitos+de+Estudo" alt="Capa do livro Hábitos de Estudo na cor verde azulada" class="capa-livro">
+                    <div class="conteudo-livro">
+                        <span class="tag-categoria">Desenvolvimento Pessoal</span>
+                        <h3>Hábitos de Estudo Eficientes</h3>
+                        <p class="autor">Por: Fernando Costa</p>
+                        <p class="descricao">Técnicas de organização e foco para otimizar sua rotina de aprendizado escolar.</p>
+                        <button type="button" class="btn-detalhes" aria-label="Ver detalhes do livro Hábitos de Estudo Eficientes">Ver detalhes</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SEÇÃO 4: SOBRE O PROJETO -->
+        <section id="sobre" class="secao container">
+            <div class="caixa-sobre">
+                <h2>Sobre o Projeto</h2>
+                <p>A <strong>Biblioteca Digital Acessível</strong> é uma plataforma criada com o compromisso de oferecer acesso democrático à leitura e ao estudo.</p>
+                <p>Desenvolvida aplicando boas práticas de acessibilidade web, garantimos que a navegação seja clara, previsível e confortável para todas as pessoas, incluindo leitores de tela e navegação por teclado.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="container">
+            <p>&copy; 2026 Biblioteca Digital Acessível — Todos os direitos reservados.</p>
+            <p>Projeto focado em Acessibilidade e Inclusão Digital.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
