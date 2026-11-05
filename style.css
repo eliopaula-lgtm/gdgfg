@@ -1,0 +1,252 @@
+/* RESET E VARIÁVEIS DE ALTO CONTRASTE */
+:root {
+    --cor-fundo: #f4f6f9;
+    --cor-texto: #1a1a1a;
+    --cor-primaria: #0d47a1;
+    --cor-secundaria: #ffffff;
+    --cor-borda: #cccccc;
+    --cor-foco: #ff6f00;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-size: 1.1rem;
+}
+
+/* LINK DE ATALHO PARA NAVEGAÇÃO VIA TECLADO */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--cor-foco);
+    color: #ffffff;
+    padding: 10px;
+    font-weight: bold;
+    z-index: 100;
+    text-decoration: none;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* FOCO VISÍVEL PARA NAVEGAÇÃO TECLADO (TAB) */
+a:focus, button:focus {
+    outline: 4px solid var(--cor-foco);
+    outline-offset: 3px;
+}
+
+/* ESTRUTURA GERAL */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.secao {
+    padding: 40px 0;
+}
+
+.secao h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    border-bottom: 3px solid var(--cor-primaria);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* CABEÇALHO E MENU */
+.cabecalho {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    padding: 20px 0;
+}
+
+.flex-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.menu-navegacao {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.menu-navegacao a {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.menu-navegacao a:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+}
+
+/* HERO / BOAS-VINDAS */
+.secao-hero {
+    background-color: #e3f2fd;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.frase-apresentacao {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* ÁREA DE CATEGORIAS (GRID) */
+.grid-categorias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.card-categoria {
+    background-color: var(--cor-secundaria);
+    border: 2px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.icone-categoria {
+    font-size: 2rem;
+}
+
+/* CARDS DE LIVROS (GRID) */
+.grid-livros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card-livro {
+    background-color: var(--cor-secundaria);
+    border: 2px solid var(--cor-borda);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.capa-livro {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.conteudo-livro {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 10px;
+}
+
+.tag-categoria {
+    background-color: #e8eaf6;
+    color: var(--cor-primaria);
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    align-self: flex-start;
+}
+
+.autor {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #444444;
+}
+
+.descricao {
+    font-size: 1rem;
+    flex-grow: 1;
+}
+
+/* BOTÕES */
+.btn-detalhes {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-detalhes:hover {
+    background-color: #0b3c85;
+}
+
+/* SOBRE O PROJETO */
+.caixa-sobre {
+    background-color: var(--cor-secundaria);
+    border-left: 6px solid var(--cor-primaria);
+    padding: 25px;
+    border-radius: 6px;
+}
+
+.caixa-sobre p {
+    margin-top: 10px;
+}
+
+/* RODAPÉ */
+.rodape {
+    background-color: #1a1a1a;
+    color: var(--cor-secundaria);
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+    font-size: 0.95rem;
+}
+
+.rodape p {
+    margin-bottom: 5px;
+}
+
+/* RESPONSIVIDADE (MEDIA QUERY) */
+@media (max-width: 768px) {
+    .flex-cabecalho {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-navegacao {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-navegacao a {
+        display: block;
+        text-align: center;
+    }
+}
